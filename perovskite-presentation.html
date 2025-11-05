@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ペロブスカイト太陽電池 - プレゼンテーション</title>
+    <link rel="stylesheet" href="presentation-style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- スライド 1: タイトル -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-content">
+                <h1>ペロブスカイト太陽電池</h1>
+                <h2>次世代の太陽光発電技術</h2>
+                <div class="slide-footer">
+                    <p>キーボードの矢印キー（←→）でスライドを操作できます</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 2: 目次 -->
+        <section class="slide" id="slide-2">
+            <div class="slide-content">
+                <h1>目次</h1>
+                <ul class="toc">
+                    <li>1. ペロブスカイト太陽電池とは</li>
+                    <li>2. 基本構造</li>
+                    <li>3. 動作原理</li>
+                    <li>4. 主な利点</li>
+                    <li>5. 課題</li>
+                    <li>6. 最新の研究動向</li>
+                    <li>7. 将来展望</li>
+                    <li>8. まとめ</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- スライド 3: ペロブスカイト太陽電池とは -->
+        <section class="slide" id="slide-3">
+            <div class="slide-content">
+                <h1>ペロブスカイト太陽電池とは</h1>
+                <div class="content-box">
+                    <h3>定義</h3>
+                    <p>ペロブスカイト構造を持つ材料を光吸収層に使用した太陽電池</p>
+                </div>
+                <div class="content-box">
+                    <h3>ペロブスカイト構造</h3>
+                    <p>化学式: ABX₃</p>
+                    <ul>
+                        <li>A: 有機カチオン（CH₃NH₃⁺など）</li>
+                        <li>B: 金属カチオン（Pb²⁺、Sn²⁺など）</li>
+                        <li>X: ハロゲンイオン（I⁻、Br⁻、Cl⁻）</li>
+                    </ul>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>代表例:</strong> CH₃NH₃PbI₃（メチルアンモニウム鉛ヨウ化物）</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 4: 発展の歴史 -->
+        <section class="slide" id="slide-4">
+            <div class="slide-content">
+                <h1>発展の歴史</h1>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">2009年</div>
+                        <div class="description">桐蔭横浜大学の宮坂力教授らが初めて開発<br>変換効率: 3.8%</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2012年</div>
+                        <div class="description">固体型ペロブスカイト太陽電池の開発<br>変換効率: 10%超</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2015年</div>
+                        <div class="description">変換効率: 20%突破</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2023年</div>
+                        <div class="description">実験室レベルで変換効率: 26%以上達成<br>シリコン太陽電池に匹敵</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 5: 基本構造 -->
+        <section class="slide" id="slide-5">
+            <div class="slide-content">
+                <h1>基本構造</h1>
+                <div class="structure-diagram">
+                    <div class="layer">透明電極（ITO/FTO）</div>
+                    <div class="layer">電子輸送層（TiO₂など）</div>
+                    <div class="layer highlight">ペロブスカイト光吸収層</div>
+                    <div class="layer">正孔輸送層（Spiro-OMeTADなど）</div>
+                    <div class="layer">金属電極（Au、Agなど）</div>
+                </div>
+                <div class="content-box">
+                    <h3>層構造の特徴</h3>
+                    <ul>
+                        <li>薄膜構造（数百nm程度）</li>
+                        <li>低温プロセスで製造可能</li>
+                        <li>フレキシブル基板にも対応可能</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 6: 動作原理 -->
+        <section class="slide" id="slide-6">
+            <div class="slide-content">
+                <h1>動作原理</h1>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>光吸収</h3>
+                        <p>ペロブスカイト層が太陽光を吸収し、励起子（電子-正孔対）を生成</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>電荷分離</h3>
+                        <p>励起子が電子と正孔に分離</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>電荷輸送</h3>
+                        <p>電子は電子輸送層へ、正孔は正孔輸送層へ移動</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>電流生成</h3>
+                        <p>電極で電荷を収集し、外部回路に電流を供給</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 7: 主な利点 -->
+        <section class="slide" id="slide-7">
+            <div class="slide-content">
+                <h1>主な利点</h1>
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <div class="icon">⚡</div>
+                        <h3>高い変換効率</h3>
+                        <p>シリコン太陽電池に匹敵する26%以上の変換効率を達成</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="icon">💰</div>
+                        <h3>低コスト</h3>
+                        <p>溶液プロセスで製造可能、安価な材料を使用</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="icon">🌡️</div>
+                        <h3>低温製造</h3>
+                        <p>150℃以下の低温で製造可能（シリコンは1000℃以上）</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="icon">📱</div>
+                        <h3>柔軟性</h3>
+                        <p>フレキシブル基板への適用が可能</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="icon">🎨</div>
+                        <h3>カラーバリエーション</h3>
+                        <p>材料の組成変更により色の調整が可能</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="icon">🔬</div>
+                        <h3>簡易な製造プロセス</h3>
+                        <p>塗布やスピンコートなど簡単な方法で製造可能</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 8: 課題 -->
+        <section class="slide" id="slide-8">
+            <div class="slide-content">
+                <h1>克服すべき課題</h1>
+                <div class="challenges">
+                    <div class="challenge-item critical">
+                        <h3>🔴 耐久性・安定性</h3>
+                        <ul>
+                            <li>湿度、熱、紫外線に弱い</li>
+                            <li>長期安定性が不十分（劣化が早い）</li>
+                            <li>実用化には20-25年の寿命が必要</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-item critical">
+                        <h3>🔴 鉛の使用</h3>
+                        <ul>
+                            <li>高効率な材料には鉛が含まれる</li>
+                            <li>環境・健康への影響が懸念</li>
+                            <li>鉛フリー代替材料の開発が必要</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>🟡 大面積化</h3>
+                        <ul>
+                            <li>小型セルでは高効率だが、大型化で効率低下</li>
+                            <li>均一な薄膜形成が困難</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>🟡 製造プロセスの最適化</h3>
+                        <ul>
+                            <li>再現性の確保</li>
+                            <li>量産技術の確立</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 9: 最新の研究動向 -->
+        <section class="slide" id="slide-9">
+            <div class="slide-content">
+                <h1>最新の研究動向</h1>
+                <div class="research-areas">
+                    <div class="research-box">
+                        <h3>材料開発</h3>
+                        <ul>
+                            <li>鉛フリーペロブスカイト（Snベース、Biベース）</li>
+                            <li>2D/3Dハイブリッド構造</li>
+                            <li>混合ハロゲン系ペロブスカイト</li>
+                        </ul>
+                    </div>
+                    <div class="research-box">
+                        <h3>安定性向上</h3>
+                        <ul>
+                            <li>封止技術の改善</li>
+                            <li>添加剤による安定化</li>
+                            <li>界面工学</li>
+                        </ul>
+                    </div>
+                    <div class="research-box">
+                        <h3>タンデム太陽電池</h3>
+                        <ul>
+                            <li>シリコン/ペロブスカイトタンデム</li>
+                            <li>変換効率30%以上を目指す</li>
+                            <li>実用化に最も近い技術</li>
+                        </ul>
+                    </div>
+                    <div class="research-box">
+                        <h3>新応用分野</h3>
+                        <ul>
+                            <li>建材一体型太陽電池（BIPV）</li>
+                            <li>透明太陽電池</li>
+                            <li>IoTデバイス用電源</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 10: タンデム太陽電池 -->
+        <section class="slide" id="slide-10">
+            <div class="slide-content">
+                <h1>タンデム太陽電池の可能性</h1>
+                <div class="tandem-explanation">
+                    <div class="content-box">
+                        <h3>タンデム構造とは</h3>
+                        <p>異なるバンドギャップを持つ複数の太陽電池を積層</p>
+                    </div>
+                    <div class="tandem-diagram">
+                        <div class="tandem-layer">ペロブスカイト層（高エネルギー光吸収）</div>
+                        <div class="tandem-arrow">↓</div>
+                        <div class="tandem-layer">シリコン層（低エネルギー光吸収）</div>
+                    </div>
+                    <div class="highlight-box">
+                        <h3>メリット</h3>
+                        <ul>
+                            <li>太陽光スペクトルをより効率的に利用</li>
+                            <li>理論変換効率: 35%以上</li>
+                            <li>既存のシリコン技術と組み合わせ可能</li>
+                        </ul>
+                    </div>
+                    <div class="stats-box">
+                        <p><strong>最新記録:</strong> 33.9%の変換効率達成（2024年）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 11: 将来展望 -->
+        <section class="slide" id="slide-11">
+            <div class="slide-content">
+                <h1>将来展望</h1>
+                <div class="future-timeline">
+                    <div class="future-item">
+                        <h3>短期（2025-2027年）</h3>
+                        <ul>
+                            <li>タンデム太陽電池の商業化開始</li>
+                            <li>耐久性10年以上の製品登場</li>
+                            <li>特殊用途での実用化</li>
+                        </ul>
+                    </div>
+                    <div class="future-item">
+                        <h3>中期（2028-2032年）</h3>
+                        <ul>
+                            <li>鉛フリー材料の実用化</li>
+                            <li>大面積モジュールの量産開始</li>
+                            <li>建材一体型製品の普及</li>
+                        </ul>
+                    </div>
+                    <div class="future-item">
+                        <h3>長期（2033年以降）</h3>
+                        <ul>
+                            <li>シリコン太陽電池市場の一部代替</li>
+                            <li>変換効率35%以上の達成</li>
+                            <li>新しいエネルギーインフラの一翼を担う</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="market-info">
+                    <p><strong>市場予測:</strong> 2030年までにペロブスカイト太陽電池市場は数十億ドル規模に成長する見込み</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 12: 日本の取り組み -->
+        <section class="slide" id="slide-12">
+            <div class="slide-content">
+                <h1>日本における取り組み</h1>
+                <div class="japan-efforts">
+                    <div class="effort-box">
+                        <h3>研究機関</h3>
+                        <ul>
+                            <li><strong>桐蔭横浜大学:</strong> ペロブスカイト太陽電池の発祥地</li>
+                            <li><strong>東京大学:</strong> 高効率化・安定化研究</li>
+                            <li><strong>NIMS（物質・材料研究機構）:</strong> 材料開発</li>
+                            <li><strong>産業技術総合研究所:</strong> 実用化研究</li>
+                        </ul>
+                    </div>
+                    <div class="effort-box">
+                        <h3>企業</h3>
+                        <ul>
+                            <li><strong>パナソニック:</strong> タンデム太陽電池開発</li>
+                            <li><strong>積水化学:</strong> フィルム型太陽電池</li>
+                            <li><strong>東芝:</strong> 大面積化技術</li>
+                            <li><strong>リコー:</strong> インクジェット塗布技術</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-box">
+                        <p>日本は基礎研究から実用化まで、ペロブスカイト太陽電池分野で世界をリード</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 13: まとめ -->
+        <section class="slide" id="slide-13">
+            <div class="slide-content">
+                <h1>まとめ</h1>
+                <div class="summary-grid">
+                    <div class="summary-item positive">
+                        <h3>✓ 強み</h3>
+                        <ul>
+                            <li>高い変換効率（26%以上）</li>
+                            <li>低コスト製造</li>
+                            <li>柔軟な応用可能性</li>
+                            <li>タンデム化による更なる高効率化</li>
+                        </ul>
+                    </div>
+                    <div class="summary-item negative">
+                        <h3>✗ 課題</h3>
+                        <ul>
+                            <li>長期安定性の確保</li>
+                            <li>鉛の代替材料開発</li>
+                            <li>大面積化技術</li>
+                            <li>量産プロセスの確立</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="conclusion-box">
+                    <h3>結論</h3>
+                    <p>ペロブスカイト太陽電池は、多くの課題を抱えながらも、<br>
+                    次世代の太陽光発電技術として大きな可能性を秘めています。</p>
+                    <p>今後5-10年の研究開発が、実用化の鍵となります。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- スライド 14: 参考資料 -->
+        <section class="slide" id="slide-14">
+            <div class="slide-content">
+                <h1>参考資料・さらに学ぶために</h1>
+                <div class="references">
+                    <div class="ref-section">
+                        <h3>主要な学術論文</h3>
+                        <ul>
+                            <li>Nature Energy、Nature Photonicsなどの学術誌</li>
+                            <li>NREL（米国再生可能エネルギー研究所）の効率チャート</li>
+                        </ul>
+                    </div>
+                    <div class="ref-section">
+                        <h3>日本の研究機関</h3>
+                        <ul>
+                            <li>桐蔭横浜大学 先端材料科学研究所</li>
+                            <li>NEDO（新エネルギー・産業技術総合開発機構）</li>
+                            <li>JST（科学技術振興機構）のプロジェクト情報</li>
+                        </ul>
+                    </div>
+                    <div class="ref-section">
+                        <h3>国際会議</h3>
+                        <ul>
+                            <li>International Conference on Hybrid and Organic Photovoltaics (HOPV)</li>
+                            <li>MRS (Materials Research Society) Meeting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="thank-you">
+                    <h2>ご清聴ありがとうございました</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- スライドナビゲーション -->
+    <div class="slide-navigation">
+        <button id="prev-btn" onclick="prevSlide()">◀ 前へ</button>
+        <span id="slide-counter">1 / 14</span>
+        <button id="next-btn" onclick="nextSlide()">次へ ▶</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 14;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+
+            document.getElementById('slide-counter').textContent = `${currentSlide} / ${totalSlides}`;
+
+            // ボタンの無効化
+            document.getElementById('prev-btn').disabled = currentSlide === 1;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides;
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // キーボードナビゲーション
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+
+        // 初期表示
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

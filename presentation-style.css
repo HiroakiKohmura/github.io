@@ -1,0 +1,720 @@
+/* リセットとベーススタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* プレゼンテーションコンテナ */
+.presentation-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+/* スライド */
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* タイトルスライド */
+#slide-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#slide-1 h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+#slide-1 h2 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 300;
+    animation: fadeInUp 1s ease 0.5s backwards;
+}
+
+.slide-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* 見出し */
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #667eea;
+    padding-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* 目次 */
+.toc {
+    list-style: none;
+    font-size: 1.3em;
+    line-height: 2.2;
+}
+
+.toc li {
+    padding: 15px 20px;
+    background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+    margin-bottom: 15px;
+    border-left: 5px solid #667eea;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.toc li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* コンテンツボックス */
+.content-box {
+    background: #f8f9fa;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+}
+
+.content-box h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.content-box ul {
+    margin-left: 25px;
+    line-height: 1.8;
+}
+
+.content-box p {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ハイライトボックス */
+.highlight-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.highlight-box strong {
+    font-size: 1.2em;
+}
+
+.highlight-box ul {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+/* タイムライン */
+.timeline {
+    position: relative;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #667eea;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #667eea;
+}
+
+.year {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.description {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+/* 構造図 */
+.structure-diagram {
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.layer {
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.layer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.layer.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    font-weight: bold;
+}
+
+/* プロセスステップ */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 利点グリッド */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.advantage-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.advantage-item p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* 課題 */
+.challenges {
+    display: grid;
+    gap: 20px;
+}
+
+.challenge-item {
+    background: #fff8e1;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #ffc107;
+}
+
+.challenge-item.critical {
+    background: #ffebee;
+    border-left-color: #f44336;
+}
+
+.challenge-item h3 {
+    margin-bottom: 15px;
+}
+
+.challenge-item ul {
+    margin-left: 25px;
+    line-height: 1.8;
+}
+
+/* 研究エリア */
+.research-areas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.research-box {
+    background: linear-gradient(to bottom right, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #667eea;
+}
+
+.research-box h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.research-box ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* タンデム図 */
+.tandem-explanation {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tandem-diagram {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.tandem-layer {
+    background: #667eea;
+    color: white;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 8px;
+    max-width: 500px;
+    font-weight: bold;
+}
+
+.tandem-arrow {
+    font-size: 2em;
+    color: #667eea;
+    margin: 10px 0;
+}
+
+.stats-box {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #4caf50;
+}
+
+/* 将来展望 */
+.future-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.future-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #667eea;
+}
+
+.future-item h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.future-item ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.market-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* 日本の取り組み */
+.japan-efforts {
+    display: grid;
+    gap: 20px;
+}
+
+.effort-box {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.effort-box h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.effort-box ul {
+    margin-left: 20px;
+    line-height: 2;
+}
+
+.effort-box strong {
+    color: #2c3e50;
+}
+
+/* まとめ */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.summary-item {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item.positive {
+    background: linear-gradient(to bottom right, #e8f5e9 0%, #c8e6c9 100%);
+    border-left: 5px solid #4caf50;
+}
+
+.summary-item.negative {
+    background: linear-gradient(to bottom right, #fff8e1 0%, #ffecb3 100%);
+    border-left: 5px solid #ffc107;
+}
+
+.summary-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.summary-item ul {
+    margin-left: 25px;
+    line-height: 2;
+    font-size: 1.05em;
+}
+
+.conclusion-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.conclusion-box h3 {
+    color: white;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.conclusion-box p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* 参考資料 */
+.references {
+    display: grid;
+    gap: 25px;
+}
+
+.ref-section {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.ref-section h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.ref-section ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.thank-you {
+    margin-top: 40px;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+}
+
+.thank-you h2 {
+    color: white;
+    font-size: 2em;
+}
+
+/* ナビゲーション */
+.slide-navigation {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slide-navigation button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.slide-navigation button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.slide-navigation button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#slide-counter {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1em;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* アニメーション */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 1024px) {
+    .presentation-container {
+        height: 600px;
+    }
+
+    .slide {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .advantages-grid,
+    .research-areas,
+    .future-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .presentation-container {
+        height: 500px;
+    }
+
+    .slide {
+        padding: 30px;
+    }
+
+    #slide-1 h1 {
+        font-size: 2.5em;
+    }
+
+    #slide-1 h2 {
+        font-size: 1.3em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .advantages-grid,
+    .research-areas,
+    .future-timeline,
+    .process-steps,
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-navigation {
+        padding: 10px 20px;
+        gap: 15px;
+    }
+
+    .slide-navigation button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .presentation-container {
+        height: 450px;
+        border-radius: 5px;
+    }
+
+    .slide {
+        padding: 20px;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .toc {
+        font-size: 1em;
+    }
+
+    .slide-navigation {
+        bottom: 15px;
+        padding: 8px 15px;
+    }
+}
